@@ -1,0 +1,11 @@
+Cita de 9 bloques (maximo 4) -> RECHAZADO por: citas_bloques_validos
+Fin distinto de inicio + bloques -> RECHAZADO por: citas_duracion_valida
+Inicio a las hh:15 (no es bloque) -> RECHAZADO por: citas_inicio_en_bloque
+Estado que no existe -> RECHAZADO por: citas_estado_check
+Cruce del odontologo (EXCLUDE) -> RECHAZADO por: citas_sin_cruce_odontologo
+Cruce del paciente (EXCLUDE) -> RECHAZADO por: citas_sin_cruce_paciente
+Pago con monto 0 -> RECHAZADO por: pagos_monto_positivo
+Pago con metodo que no existe -> RECHAZADO por: pagos_metodo_check
+Tratamiento con costo negativo -> RECHAZADO por: tratamientos_costo_valido
+Horario con hora_fin <= hora_inicio -> RECHAZADO por: horarios_rango_valido
+Horario en el dia 9 de la semana -> RECHAZADO por: horarios_dia_valido

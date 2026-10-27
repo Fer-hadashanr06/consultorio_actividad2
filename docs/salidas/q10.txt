@@ -1,0 +1,17 @@
+Estado de cuenta: Ángeles Fernández (CI 8158978 SC)
+Tratamientos (los 2 ultimos):
+ - 2026-10-22 14:30 | Oliver Casillas | Limpieza dental | Bs 150.00
+ - 2026-10-22 14:30 | Oliver Casillas | Obturacion con resina | Bs 200.00
+Pagos:
+ - 2026-10-16 | tarjeta | Bs 1,630.00
+ - 2026-10-21 | tarjeta | Bs 250.00
+Total tratamientos: Bs 1,980.00
+Total pagos: Bs 1,880.00
+Saldo: Bs 100.00
+Tratamiento en cita no asistida -> RECHAZADO: Solo se registran tratamientos en citas confirmadas o atendidas (estado actual: no_asistida).
+Pacientes con saldo pendiente: 13 | deuda total: Bs 17,655.00
+ - Carlos Mamani | Bs 3,850.00
+ - Marco Aguilera | Bs 2,150.00
+ - Carla Serrano | Bs 1,830.00
+ - Carla Linares | Bs 1,550.00
+ - Jaime Flórez | Bs 1,450.00

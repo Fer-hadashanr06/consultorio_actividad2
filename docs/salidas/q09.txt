@@ -1,0 +1,19 @@
+1) COUNT: citas por estado
+ atendida: 123
+ confirmada: 60
+ no_asistida: 49
+ agendada: 46
+ reprogramada: 18
+2) SUM: pagos recibidos por metodo (Bs)
+ tarjeta: 13 pagos | Bs 26,520.00
+ efectivo: 13 pagos | Bs 24,860.00
+ transferencia: 7 pagos | Bs 10,355.00
+3) AVG: costo promedio de un tratamiento por especialidad (Bs)
+ ortodoncia: 55 tratamientos | promedio Bs 581.82 | maximo Bs 1800.00
+ endodoncia: 74 tratamientos | promedio Bs 523.65 | maximo Bs 900.00
+ odontopediatria: 56 tratamientos | promedio Bs 154.29 | maximo Bs 250.00
+4) HAVING: odontologos con 20 o mas citas atendidas
+ Manuel Quintana: 29 atendidas
+ Juan Andrés: 25 atendidas
+ Silvia Marín: 21 atendidas
+ (3 de 6 odontologos cumplen)

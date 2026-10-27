@@ -1,0 +1,12 @@
+  Dropping all tables ........................................... 22.11ms DONE
+  Creating migration table ....................................... 7.70ms DONE
+  0001_01_01_000000_create_users_table .......................... 13.76ms DONE
+  0001_01_01_000001_create_cache_table ........................... 8.74ms DONE
+  0001_01_01_000002_create_jobs_table ........................... 14.81ms DONE
+  2026_10_19_100000_create_odontologos_table ..................... 7.64ms DONE
+  2026_10_19_100100_create_horarios_atencion_table ............... 7.42ms DONE
+  2026_10_19_100200_create_pacientes_table ....................... 7.28ms DONE
+  2026_10_19_100300_create_historiales_clinicos_table ............ 6.85ms DONE
+  2026_10_19_100400_create_citas_table .......................... 14.94ms DONE
+  2026_10_19_100500_create_tratamientos_table .................... 8.89ms DONE
+  2026_10_19_100600_create_pagos_table ........................... 7.43ms DONE

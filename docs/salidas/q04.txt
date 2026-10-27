@@ -1,0 +1,6 @@
+1) Cita con paciente inexistente -> RECHAZADO: ERROR: insert or update on table "citas" violates foreign key constraint "citas_paciente_id_foreign" DETAIL: Key (paciente_id)=(999999) is not present in table "pacientes".
+2) Borrar paciente con citas -> RECHAZADO: ERROR: update or delete on table "pacientes" violates foreign key constraint "citas_paciente_id_foreign" on table "citas" DETAIL: Key (id)=(1) is still referenced from table "citas".
+3) Horarios del odontologo temporal antes de borrarlo: 2
+   Horarios despues de borrarlo (cascade): 0
+4) Pago #34 ligado a la cita #298
+   Tras borrar la cita, el pago existe: si | cita_id = NULL

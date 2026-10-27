@@ -1,0 +1,7 @@
+Domingo 10:00 (no atiende) -> RECHAZADO: El odontologo no atiende ese dia u hora (fuera de su horario de atencion).
+Antes de abrir -> RECHAZADO: El odontologo no atiende ese dia u hora (fuera de su horario de atencion).
+A mitad de bloque (hh:15) -> RECHAZADO: La cita debe comenzar al inicio de un bloque de 30 minutos (hh:00 o hh:30).
+Cita existente: Casillas 2026-10-22 17:30
+Mismo odontologo, mismo bloque -> RECHAZADO: El odontologo ya tiene una cita en ese horario.
+Mismo paciente, otro odontologo -> RECHAZADO: El odontologo no atiende ese dia u hora (fuera de su horario de atencion).
+Odontologo inactivo -> RECHAZADO: El odontologo no esta activo.

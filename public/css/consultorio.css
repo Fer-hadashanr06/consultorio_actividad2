@@ -1,0 +1,251 @@
+/* ==========================================================================
+   Consultorio odontológico — hoja de estilos única (sitio público + panel)
+   ========================================================================== */
+:root {
+    --tinta: #0f2438;
+    --tinta-2: #3b5368;
+    --tinta-3: #6b8093;
+    --esmalte: #f4f7f9;
+    --blanco: #ffffff;
+    --borde: #dce5eb;
+    --azul: #1f5e8c;
+    --azul-osc: #164766;
+    --azul-claro: #e3eef6;
+    --menta: #d6efe6;
+    --menta-osc: #1d7a60;
+    --coral: #d95d4b;
+    --coral-claro: #fbe6e2;
+    --ambar: #f3d9a4;
+    --fuente-titulo: 'Fraunces', Georgia, 'Times New Roman', serif;
+    --fuente: 'Figtree', 'Segoe UI', system-ui, -apple-system, Arial, sans-serif;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; font-family: var(--fuente); background: var(--esmalte); color: var(--tinta); line-height: 1.55; font-size: 15px; }
+a { color: var(--azul); }
+a:hover { color: var(--azul-osc); }
+:focus-visible { outline: 3px solid #7fb4dc; outline-offset: 2px; border-radius: 4px; }
+h1, h2, h3 { font-family: var(--fuente-titulo); font-weight: 600; color: var(--tinta); line-height: 1.2; }
+h1 { font-size: 28px; margin: 0 0 18px; }
+h2 { font-size: 20px; margin: 28px 0 10px; }
+h3 { font-size: 17px; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { animation: none !important; transition: none !important; } }
+
+/* ---------- Botones ---------- */
+.boton { display: inline-flex; align-items: center; gap: 6px; background: var(--azul); color: #fff; border: 0; border-radius: 8px; padding: 9px 16px; font: 600 14px var(--fuente); cursor: pointer; text-decoration: none; transition: background .15s; }
+.boton:hover { background: var(--azul-osc); color: #fff; }
+.boton.gris { background: #e8eef2; color: var(--tinta-2); }
+.boton.gris:hover { background: #d9e2e8; color: var(--tinta); }
+.boton.rojo { background: var(--coral); }
+.boton.rojo:hover { background: #b84a3a; }
+.boton.verde { background: var(--menta-osc); }
+.boton.verde:hover { background: #155f4b; }
+.boton.chico { padding: 4px 10px; font-size: 13px; border-radius: 6px; }
+.boton.grande { padding: 13px 24px; font-size: 16px; border-radius: 10px; }
+.boton.contorno { background: transparent; color: var(--azul); box-shadow: inset 0 0 0 2px var(--azul); }
+.boton.contorno:hover { background: var(--azul-claro); color: var(--azul-osc); }
+.boton svg { width: 17px; height: 17px; }
+
+/* ---------- Formularios ---------- */
+label { display: block; font-size: 13px; font-weight: 600; margin-bottom: 4px; color: var(--tinta-2); }
+input, select, textarea { width: 100%; padding: 10px 12px; border: 1px solid #b9cbd7; border-radius: 8px; font: 15px var(--fuente); background: #fff; color: var(--tinta); }
+input:focus, select:focus, textarea:focus { outline: 3px solid #bcd8ec; border-color: var(--azul); }
+input[type=checkbox], input[type=radio] { width: auto; }
+.rejilla { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; }
+.fila { display: flex; gap: 12px; flex-wrap: wrap; align-items: flex-end; }
+.fila > div { flex: 1; min-width: 150px; }
+.bloques { display: flex; flex-wrap: wrap; gap: 8px; }
+.bloques label { font-weight: 500; border: 1px solid #b9cbd7; border-radius: 999px; padding: 6px 14px; background: #fff; cursor: pointer; color: var(--tinta); }
+.bloques label:has(input:checked) { background: var(--azul); border-color: var(--azul); color: #fff; }
+.bloques input { width: auto; margin-right: 5px; }
+
+/* ---------- Tarjetas, tablas, estados ---------- */
+.tarjeta { background: var(--blanco); border: 1px solid var(--borde); border-radius: 12px; padding: 20px; margin-bottom: 18px; }
+table { width: 100%; border-collapse: separate; border-spacing: 0; background: #fff; border: 1px solid var(--borde); border-radius: 12px; overflow: hidden; }
+th, td { text-align: left; padding: 11px 14px; border-bottom: 1px solid #edf2f5; font-size: 14px; vertical-align: middle; }
+tr:last-child td { border-bottom: 0; }
+th { background: #f0f5f8; color: var(--tinta-2); font-weight: 700; font-size: 13px; }
+tbody tr:hover td, tr:hover > td { background: #fafcfd; }
+.num { text-align: right; }
+.vacio { color: var(--tinta-3); font-style: italic; }
+.estado { display: inline-block; padding: 2px 10px; border-radius: 999px; font-size: 12px; font-weight: 700; }
+.agendada { background: var(--azul-claro); color: var(--azul-osc); }
+.confirmada { background: var(--menta); color: #14604a; }
+.reprogramada { background: #fcefd0; color: #7a5200; }
+.atendida { background: #e0e7f5; color: #2b3f7a; }
+.no_asistida { background: var(--coral-claro); color: #8d2f22; }
+.acciones { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+.acciones form { margin: 0; }
+.saldo-debe { color: #b0382a; font-weight: 700; }
+.saldo-ok { color: var(--menta-osc); font-weight: 700; }
+.alerta { padding: 11px 15px; border-radius: 10px; margin-bottom: 16px; font-size: 14px; }
+.alerta.exito { background: var(--menta); border: 1px solid #9fd3c0; color: #14604a; }
+.alerta.error { background: var(--coral-claro); border: 1px solid #efb3aa; color: #8d2f22; }
+.alerta ul { margin: 0; padding-left: 18px; }
+.pagination { list-style: none; display: flex; gap: 4px; padding: 0; justify-content: center; margin: 18px 0 0; flex-wrap: wrap; }
+.pagination li { background: #fff; border: 1px solid var(--borde); padding: 5px 11px; border-radius: 6px; font-size: 13px; }
+.pagination li.active { background: var(--azul); border-color: var(--azul); }
+.pagination li.active span { color: #fff; }
+.pagination li.disabled { color: #9fb0bd; }
+.pagination a { text-decoration: none; }
+.encabezado { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin-bottom: 18px; }
+.encabezado h1 { margin: 0; }
+.encabezado p { margin: 4px 0 0; color: var(--tinta-3); }
+@media (max-width: 720px) { table { display: block; overflow-x: auto; white-space: nowrap; } }
+
+/* ==========================================================================
+   SITIO PÚBLICO
+   ========================================================================== */
+.contenedor { max-width: 1120px; margin: 0 auto; padding: 0 20px; }
+.barra { background: rgba(255,255,255,.92); backdrop-filter: blur(6px); border-bottom: 1px solid var(--borde); position: sticky; top: 0; z-index: 20; }
+.barra .contenedor { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 64px; flex-wrap: wrap; }
+.marca { display: flex; align-items: center; gap: 10px; color: var(--tinta); text-decoration: none; font: 600 19px var(--fuente-titulo); }
+.marca:hover { color: var(--tinta); }
+.marca .sello { width: 34px; height: 34px; border-radius: 10px; background: var(--azul); color: #fff; display: grid; place-items: center; }
+.marca .sello svg { width: 21px; height: 21px; }
+.barra nav { display: flex; align-items: center; gap: 22px; flex-wrap: wrap; }
+.barra nav a:not(.boton) { color: var(--tinta-2); text-decoration: none; font-weight: 500; }
+.barra nav a:not(.boton):hover { color: var(--azul); }
+
+.portada { background: var(--blanco); border-bottom: 1px solid var(--borde); }
+.portada .contenedor { display: grid; grid-template-columns: 1.05fr 1fr; gap: 40px; align-items: center; padding-top: 56px; padding-bottom: 56px; }
+.portada h1 { font-size: 48px; line-height: 1.08; margin: 0 0 18px; letter-spacing: -.01em; }
+.portada .lead { font-size: 18px; color: var(--tinta-2); max-width: 46ch; margin: 0 0 26px; }
+.portada .botones { display: flex; gap: 12px; flex-wrap: wrap; }
+.arco { background: var(--esmalte); border: 1px solid var(--borde); border-radius: 22px; padding: 16px 16px 20px; }
+.arco svg { width: 100%; height: auto; display: block; }
+.arco .diente { cursor: pointer; outline: none; }
+.arco .diente rect { fill: #fff; stroke: #93aabb; stroke-width: 2; transition: fill .15s, stroke .15s; }
+.arco .diente.incisivo rect { fill: #eaf3fa; }
+.arco .diente.canino rect { fill: #def3ea; }
+.arco .diente.premolar rect { fill: #f6eed9; }
+.arco .diente.molar rect { fill: #f3e0dc; }
+.arco .diente:hover rect, .arco .diente:focus rect, .arco .diente.sel rect { stroke: var(--azul); stroke-width: 3.5; }
+.arco .pie { margin: 10px 6px 0; min-height: 66px; }
+.arco .pie strong { display: block; font: 600 18px var(--fuente-titulo); }
+.arco .pie span { color: var(--tinta-2); }
+.arco .nota { font-size: 12px; color: var(--tinta-3); margin: 6px 6px 0; }
+
+.seccion { padding: 64px 0 8px; }
+.seccion h2 { font-size: 32px; margin: 0 0 10px; letter-spacing: -.005em; }
+.seccion .sub { color: var(--tinta-2); margin: 0 0 28px; max-width: 62ch; font-size: 16px; }
+.dos-col { display: grid; grid-template-columns: 1fr 1fr; gap: 36px; align-items: start; }
+.diente-capas { background: #fff; border: 1px solid var(--borde); border-radius: 16px; padding: 22px; }
+.diente-capas dl { margin: 0; display: grid; gap: 14px; }
+.diente-capas dt { font-weight: 700; display: flex; align-items: center; gap: 10px; }
+.diente-capas dt i { width: 14px; height: 14px; border-radius: 4px; display: inline-block; border: 1px solid rgba(0,0,0,.15); }
+.diente-capas dd { margin: 2px 0 0 24px; color: var(--tinta-2); }
+.datos { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; margin-top: 22px; }
+.datos div { border-left: 4px solid var(--azul); padding: 2px 0 2px 14px; }
+.datos b { font: 600 26px var(--fuente-titulo); display: block; }
+.datos span { color: var(--tinta-2); font-size: 14px; }
+
+.servicios { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 18px; }
+.servicio { background: #fff; border: 1px solid var(--borde); border-radius: 16px; padding: 24px; display: flex; flex-direction: column; }
+.servicio h3 { margin: 0 0 8px; font-size: 21px; }
+.servicio p { margin: 0 0 14px; color: var(--tinta-2); }
+.servicio ul { margin: 0 0 16px; padding-left: 18px; color: var(--tinta-2); }
+.servicio small { margin-top: auto; padding-top: 12px; border-top: 1px solid #edf2f5; color: var(--tinta-3); }
+.servicio.ortodoncia { border-top: 5px solid #5b9bd0; }
+.servicio.endodoncia { border-top: 5px solid #e0a95a; }
+.servicio.odontopediatria { border-top: 5px solid #5ebd9f; }
+
+.habitos { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 0; border: 1px solid var(--borde); border-radius: 16px; overflow: hidden; background: #fff; }
+.habito { padding: 24px; border-right: 1px solid var(--borde); border-bottom: 1px solid var(--borde); margin: 0 -1px -1px 0; }
+.habito b { display: block; font: 600 30px var(--fuente-titulo); color: var(--azul); }
+.habito h3 { margin: 4px 0 6px; font-size: 17px; }
+.habito p { margin: 0; color: var(--tinta-2); font-size: 14px; }
+
+.alerta-senales { background: var(--coral-claro); border: 1px solid #efb3aa; border-radius: 16px; padding: 24px; margin-top: 22px; }
+.alerta-senales h3 { margin: 0 0 8px; color: #8d2f22; }
+.alerta-senales ul { margin: 0; padding-left: 20px; columns: 2; column-gap: 32px; color: #5e2a22; }
+
+.faq { display: grid; gap: 10px; max-width: 820px; }
+.faq details { background: #fff; border: 1px solid var(--borde); border-radius: 12px; padding: 0 18px; }
+.faq summary { cursor: pointer; padding: 15px 0; font-weight: 600; list-style: none; display: flex; justify-content: space-between; gap: 12px; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: '+'; font-size: 22px; color: var(--azul); line-height: 1; }
+.faq details[open] summary::after { content: '–'; }
+.faq details p { margin: 0 0 16px; color: var(--tinta-2); }
+
+.llamado { background: var(--tinta); color: #fff; border-radius: 22px; padding: 40px; margin: 64px 0 56px; display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
+.llamado h2 { color: #fff; margin: 0 0 6px; font-size: 28px; }
+.llamado p { margin: 0; color: #bcd0de; max-width: 52ch; }
+.llamado .boton { background: #fff; color: var(--tinta); }
+.llamado .boton:hover { background: var(--menta); }
+.pie-publico { border-top: 1px solid var(--borde); background: #fff; color: var(--tinta-3); font-size: 13px; padding: 22px 0; }
+.pie-publico .contenedor { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+
+/* ---------- Inicio de sesión ---------- */
+.acceso { min-height: 100vh; display: grid; grid-template-columns: 1fr 1fr; }
+.acceso-lado { background: var(--tinta); color: #fff; padding: 48px; display: flex; flex-direction: column; justify-content: space-between; }
+.acceso-lado .marca { color: #fff; }
+.acceso-lado h2 { color: #fff; font-size: 34px; margin: 0 0 14px; line-height: 1.15; }
+.acceso-lado ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 12px; color: #c4d5e1; }
+.acceso-lado li { display: flex; gap: 10px; }
+.acceso-lado li::before { content: ''; width: 8px; height: 8px; border-radius: 50%; background: #6fcfae; margin-top: 8px; flex: none; }
+.acceso-form { display: grid; place-items: center; padding: 32px 24px; background: var(--blanco); }
+.acceso-form form { width: 100%; max-width: 380px; }
+.acceso-form h1 { margin-bottom: 6px; }
+.acceso-form .nota { color: var(--tinta-3); margin: 0 0 22px; }
+.acceso-form .campo { margin-bottom: 16px; }
+.acceso-form .recordar { display: flex; align-items: center; gap: 8px; margin-bottom: 20px; }
+.acceso-form .recordar label { margin: 0; font-weight: 500; }
+.acceso-form .boton { width: 100%; justify-content: center; padding: 12px; font-size: 15px; }
+.acceso-form .volver { display: inline-block; margin-top: 18px; font-size: 14px; }
+
+/* ==========================================================================
+   PANEL (usuarios con sesión)
+   ========================================================================== */
+.panel-app { display: grid; grid-template-columns: 250px 1fr; min-height: 100vh; }
+.lateral { background: var(--tinta); color: #cfdde8; padding: 22px 16px; display: flex; flex-direction: column; gap: 22px; position: sticky; top: 0; height: 100vh; }
+.lateral .marca { color: #fff; font-size: 18px; padding: 0 6px; }
+.lateral .marca .sello { background: #2b7bb3; }
+.lateral nav { display: grid; gap: 4px; }
+.lateral nav a { display: flex; align-items: center; gap: 11px; padding: 10px 12px; border-radius: 9px; color: #cfdde8; text-decoration: none; font-weight: 500; }
+.lateral nav a svg { width: 19px; height: 19px; flex: none; }
+.lateral nav a:hover { background: rgba(255,255,255,.08); color: #fff; }
+.lateral nav a.activo { background: #fff; color: var(--tinta); }
+.lateral .nuevo { margin-top: 6px; }
+.lateral .nuevo .boton { width: 100%; justify-content: center; background: #2b7bb3; }
+.lateral .nuevo .boton:hover { background: #3a8cc5; }
+.lateral .sesion { margin-top: auto; border-top: 1px solid rgba(255,255,255,.14); padding-top: 16px; font-size: 14px; }
+.lateral .sesion b { display: block; color: #fff; }
+.lateral .sesion span { color: #9fb6c7; font-size: 13px; word-break: break-all; }
+.lateral .sesion form { margin-top: 12px; }
+.lateral .sesion button { display: flex; align-items: center; gap: 8px; background: transparent; border: 1px solid rgba(255,255,255,.25); color: #e6eef5; border-radius: 8px; padding: 8px 12px; cursor: pointer; font: 500 14px var(--fuente); width: 100%; }
+.lateral .sesion button:hover { background: rgba(255,255,255,.1); }
+.lateral .sesion button svg { width: 17px; height: 17px; }
+.area { padding: 32px 36px 56px; min-width: 0; }
+.area-interior { max-width: 1060px; }
+.pie-panel { margin-top: 40px; font-size: 13px; color: var(--tinta-3); }
+
+.cifras { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 14px; margin-bottom: 8px; }
+.cifra { background: #fff; border: 1px solid var(--borde); border-radius: 12px; padding: 16px 18px; text-decoration: none; color: var(--tinta); display: block; }
+.cifra:hover { border-color: var(--azul); color: var(--tinta); }
+.cifra b { display: block; font: 600 34px var(--fuente-titulo); line-height: 1.1; }
+.cifra span { color: var(--tinta-2); font-size: 14px; }
+.cifra.alerta-c b { color: var(--coral); }
+.atajos { display: flex; gap: 10px; flex-wrap: wrap; margin: 0 0 8px; }
+.columnas { display: grid; grid-template-columns: 1.4fr 1fr; gap: 22px; align-items: start; }
+.lista-simple { list-style: none; margin: 0; padding: 0; }
+.lista-simple li { display: flex; justify-content: space-between; gap: 12px; padding: 10px 0; border-bottom: 1px solid #edf2f5; font-size: 14px; }
+.lista-simple li:last-child { border-bottom: 0; }
+.lista-simple small { color: var(--tinta-3); display: block; }
+.lista-simple a { text-decoration: none; font-weight: 600; }
+
+@media (max-width: 900px) {
+    .portada .contenedor, .dos-col, .acceso, .columnas { grid-template-columns: 1fr; }
+    .portada h1 { font-size: 36px; }
+    .acceso-lado { padding: 28px; gap: 28px; }
+    .alerta-senales ul { columns: 1; }
+    .panel-app { grid-template-columns: 1fr; }
+    .lateral { position: static; height: auto; padding: 14px 16px; gap: 12px; }
+    .lateral nav { display: flex; flex-wrap: wrap; }
+    .lateral .nuevo { margin: 0; }
+    .lateral .sesion { margin-top: 0; display: flex; align-items: center; justify-content: space-between; gap: 12px; padding-top: 12px; }
+    .lateral .sesion form { margin: 0; }
+    .lateral .sesion button { width: auto; }
+    .area { padding: 22px 16px 44px; }
+    .llamado { padding: 28px; }
+}

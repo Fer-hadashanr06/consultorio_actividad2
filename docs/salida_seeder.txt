@@ -1,0 +1,12 @@
+Citas creadas: 296 | rechazadas por reglas de negocio: 1
++----------------------+-----------+
+| Tabla                | Registros |
++----------------------+-----------+
+| odontologos          | 6         |
+| horarios_atencion    | 37        |
+| pacientes            | 40        |
+| historiales_clinicos | 40        |
+| citas                | 296       |
+| tratamientos         | 185       |
+| pagos                | 33        |
++----------------------+-----------+

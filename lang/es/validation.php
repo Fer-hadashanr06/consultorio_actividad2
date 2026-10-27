@@ -1,0 +1,60 @@
+<?php
+
+// Mensajes de validación en español (solo las reglas que usa el proyecto)
+return [
+    'after' => 'El campo :attribute debe ser una fecha posterior a :date.',
+    'after_or_equal' => 'El campo :attribute debe ser una fecha posterior o igual a :date.',
+    'before' => 'El campo :attribute debe ser una fecha anterior a :date.',
+    'between' => [
+        'numeric' => 'El campo :attribute debe estar entre :min y :max.',
+        'string' => 'El campo :attribute debe tener entre :min y :max caracteres.',
+    ],
+    'boolean' => 'El campo :attribute debe ser verdadero o falso.',
+    'date' => 'El campo :attribute no es una fecha válida.',
+    'date_format' => 'El campo :attribute no coincide con el formato :format.',
+    'email' => 'El campo :attribute debe ser un correo electrónico válido.',
+    'exists' => 'El valor seleccionado para :attribute no existe.',
+    'gt' => [
+        'numeric' => 'El campo :attribute debe ser mayor que :value.',
+    ],
+    'in' => 'El valor seleccionado para :attribute no es válido.',
+    'integer' => 'El campo :attribute debe ser un número entero.',
+    'max' => [
+        'numeric' => 'El campo :attribute no debe ser mayor que :max.',
+        'string' => 'El campo :attribute no debe tener más de :max caracteres.',
+    ],
+    'min' => [
+        'numeric' => 'El campo :attribute debe ser al menos :min.',
+        'string' => 'El campo :attribute debe tener al menos :min caracteres.',
+    ],
+    'numeric' => 'El campo :attribute debe ser un número.',
+    'required' => 'El campo :attribute es obligatorio.',
+    'string' => 'El campo :attribute debe ser texto.',
+    'unique' => 'El valor de :attribute ya está registrado.',
+
+    'attributes' => [
+        'ci' => 'CI',
+        'nombre' => 'nombre',
+        'apellido' => 'apellido',
+        'fecha_nacimiento' => 'fecha de nacimiento',
+        'telefono' => 'teléfono',
+        'email' => 'correo',
+        'direccion' => 'dirección',
+        'especialidad' => 'especialidad',
+        'activo' => 'activo',
+        'dia_semana' => 'día',
+        'hora_inicio' => 'hora de inicio',
+        'hora_fin' => 'hora de fin',
+        'paciente_id' => 'paciente',
+        'odontologo_id' => 'odontólogo',
+        'fecha' => 'fecha',
+        'hora' => 'hora',
+        'bloques' => 'duración',
+        'motivo' => 'motivo',
+        'descripcion' => 'descripción',
+        'costo' => 'costo',
+        'monto' => 'monto',
+        'metodo' => 'método',
+        'cita_id' => 'cita',
+    ],
+];

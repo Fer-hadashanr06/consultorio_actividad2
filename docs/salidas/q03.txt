@@ -1,0 +1,5 @@
+CI repetido -> RECHAZADO: ERROR: duplicate key value violates unique constraint "pacientes_ci_unique" DETAIL: Key (ci)=(1234567 TJ) already exists.
+Email de paciente repetido -> RECHAZADO: ERROR: duplicate key value violates unique constraint "pacientes_email_unique" DETAIL: Key (email)=(serra.rayan@example.com) already exists.
+Email de odontologo repetido -> RECHAZADO: ERROR: duplicate key value violates unique constraint "odontologos_email_unique" DETAIL: Key (email)=(aaron.lazaro@example.com) already exists.
+Segundo historial para el mismo paciente (1 a 1) -> RECHAZADO: ERROR: duplicate key value violates unique constraint "historiales_clinicos_paciente_id_unique" DETAIL: Key (paciente_id)=(1) already exists.
+Mismo tramo horario duplicado -> RECHAZADO: ERROR: duplicate key value violates unique constraint "horarios_atencion_odontologo_id_dia_semana_hora_inicio_unique" DETAIL: Key (odontologo_id, dia_semana, hora_inicio)=(1, 1, 08:00:00) already exists.

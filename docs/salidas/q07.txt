@@ -1,0 +1,9 @@
+1) Cita creada: 2026-11-10 08:30 -> 09:30 (2 bloques, agendada)
+2) Estado tras confirmar: confirmada
+   Segunda confirmacion -> RECHAZADA: Solo se puede confirmar una cita agendada o reprogramada (estado actual: confirmada).
+3) Reprogramada a 2026-11-17 08:30 | estado: reprogramada | original: 2026-11-10 08:30 | reprogramaciones: 1
+   Reprogramar a domingo -> RECHAZADO: El odontologo no atiende ese dia u hora (fuera de su horario de atencion).
+   La cita sigue en: 2026-11-17 08:30
+4) Cita pasada 2026-09-21 08:30 | bloque libre antes: no
+   Estado: no_asistida | bloque libre despues: si
+   Marcar una cita futura -> RECHAZADO: La cita aun no ocurre, no se puede marcar como no asistida.

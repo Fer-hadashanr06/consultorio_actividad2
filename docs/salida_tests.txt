@@ -1,0 +1,49 @@
+
+   PASS  Tests\Unit\ExampleTest
+  ✓ that true is true
+
+   PASS  Tests\Feature\CitasTest
+  ✓ agenda un bloque de 30 minutos dentro del horario                    0.17s  
+  ✓ rechaza cita fuera del horario                                       0.02s  
+  ✓ rechaza cita en dia sin atencion                                     0.01s  
+  ✓ rechaza inicio que no es bloque de 30 minutos                        0.01s  
+  ✓ rechaza cruce de horario del odontologo                              0.01s  
+  ✓ confirma y reprograma una cita                                       0.01s  
+  ✓ reprogramar a un horario invalido deja la cita como estaba           0.01s  
+  ✓ no asistida libera el bloque                                         0.01s  
+  ✓ no se puede marcar no asistida una cita futura                       0.01s  
+  ✓ estado de cuenta suma tratamientos y pagos                           0.01s  
+
+   PASS  Tests\Feature\ExampleTest
+  ✓ the application returns a successful response                        0.04s  
+
+   PASS  Tests\Feature\FactoriesTest
+  ✓ odontologo con horario completo tiene 10 tramos                      0.01s  
+  ✓ horario factory crea un tramo valido                                 0.01s  
+  ✓ paciente nuevo recibe un historial automatico                        0.01s  
+  ✓ historial factory crea un solo historial por paciente                0.01s  
+  ✓ cita factory respeta las reglas de agenda                            0.01s  
+  ✓ estados de cita del factory                                          0.03s  
+  ✓ tratamiento queda en el historial del paciente de la cita            0.01s  
+  ✓ pago factory y relaciones nuevas                                     0.02s  
+
+   PASS  Tests\Feature\WebTest
+  ✓ las pantallas principales cargan                                     0.03s  
+  ✓ registra un paciente y crea su historial                             0.03s  
+  ✓ rechaza ci duplicado y datos invalidos                               0.02s  
+  ✓ los mensajes de validacion estan en espanol                          0.01s  
+  ✓ editar paciente permite conservar su propio ci                       0.01s  
+  ✓ no elimina un paciente con citas                                     0.02s  
+  ✓ elimina un paciente sin citas                                        0.01s  
+  ✓ odontologo con horario y tramo duplicado                             0.02s  
+  ✓ especialidad invalida y email repetido en odontologo                 0.01s  
+  ✓ pantalla de nueva cita muestra los bloques libres                    0.02s  
+  ✓ agenda una cita valida                                               0.02s  
+  ✓ las reglas de negocio se muestran como errores                       0.03s  
+  ✓ ciclo de vida confirmar reprogramar y no asistida                    0.03s  
+  ✓ registra tratamiento y pago y actualiza el saldo                     0.04s  
+  ✓ no registra tratamiento en una cita agendada                         0.01s  
+
+  Tests:    35 passed (134 assertions)
+  Duration: 0.83s
+
